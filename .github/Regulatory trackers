@@ -1,0 +1,33 @@
+┌─────────────────────────────────────────────────────────────┐
+│                    AI Agent Architecture                     │
+├─────────────────────────────────────────────────────────────┤
+│  1. Data Collection Layer                                    │
+│     ├─ Web scraping (BeautifulSoup, Scrapy)                  │
+│     ├─ API integration (if available)                        │
+│     ├─ RSS feed monitoring                                   │
+│     └─ Scheduled crawling (every 6-24 hours) [web:2][web:4] │
+├─────────────────────────────────────────────────────────────┤
+│  2. Processing Layer                                         │
+│     ├─ LLM core for reasoning (e.g., GPT-4, Claude)          │
+│     ├─ NLP for document classification                       │
+│     ├─ Change detection algorithms                           │
+│     └─ Document parsing (PDF, HTML) [web:1][web:9]           │
+├─────────────────────────────────────────────────────────────┤
+│  3. Analysis Layer                                           │
+│     ├─ Impact assessment on existing products/policies       │
+│     ├─ Compare new guidelines vs. internal policies [web:4]  │
+│     ├─ Filter by therapeutic area/product type [web:9]       │
+│     └─ Causality algorithms for safety signals [web:1]       │
+├─────────────────────────────────────────────────────────────┤
+│  4. Output Layer                                             │
+│     ├─ Summary reports (CTD format) [web:1]                  │
+│     ├─ Alert notifications (email/SMS/dashboard)             │
+│     ├─ Compliance gap identification [web:9]                 │
+│     └─ Audit-friendly citations [web:3]                      │
+├─────────────────────────────────────────────────────────────┤
+│  5. Guardrails                                               │
+│     ├─ Human-in-the-loop escalation for critical decisions   │
+│     ├─ Immutable audit trails [web:1][web:3]                 │
+│     ├─ GxP/HIPAA compliance [web:1]                          │
+│     └─ RBAC/SSO enterprise security [web:3]                  │
+└─────────────────────────────────────────────────────────────┘
