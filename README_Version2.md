@@ -55,8 +55,8 @@ I'm always interested in discussing:
 - Collaboration opportunities in pharmaceutical AI
 
 **Connect with me:**
-- 💼 LinkedIn: [Add your LinkedIn]
-- 📧 Email: [Add your email]
+- 💼 LinkedIn:https://www.linkedin.com/in/parthiban-s-46092b399
+- 📧 Email: [sparthiban986@gmail.com]
 - 🌐 Portfolio: [Add your website if available]
 
 ## 📚 Knowledge Base
