@@ -1,0 +1,872 @@
+```html
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parthiban S | B.Pharm Graduate & Pharmaceutical Professional</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        clinical: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            200: '#99f6e4',
+                            300: '#5eead4',
+                            400: '#2dd4bf',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            800: '#115e59',
+                            900: '#134e4a',
+                            950: '#042f2e',
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'spin-slow': 'spin 12s linear infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        /* Glassmorphism Classes */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .dark .glass-card {
+            background: rgba(15, 23, 42, 0.7);
+        }
+        
+        /* Print Stylesheet - Auto reformats the webpage into a beautiful physical resume */
+        @media print {
+            body {
+                background: white !important;
+                color: black !important;
+                font-size: 11pt !important;
+            }
+            header, footer, #simulator-controls, #gowning-game, #quiz-section, #contact, .no-print, button, #themeToggle {
+                display: none !important;
+            }
+            .print-layout {
+                display: block !important;
+                width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+            .print-section {
+                page-break-inside: avoid;
+                margin-bottom: 1.5rem;
+                border: none !important;
+                box-shadow: none !important;
+                background: transparent !important;
+            }
+            h1 { font-size: 24pt !important; font-weight: bold !important; margin-bottom: 4px !important; }
+            h2 { font-size: 16pt !important; font-weight: bold !important; border-bottom: 2px solid #0d9488 !important; padding-bottom: 2px !important; margin-top: 15px !important; }
+            h3 { font-size: 12pt !important; font-weight: bold !important; }
+            p, li { font-size: 10pt !important; line-height: 1.4 !important; }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col">
+
+    <!-- Print-only Clean Resume View -->
+    <div class="hidden print-layout max-w-4xl mx-auto p-8 bg-white text-black">
+        <div class="text-center border-b-2 border-clinical-600 pb-4">
+            <h1 class="text-3xl font-extrabold text-slate-900">PARTHIBAN S</h1>
+            <p class="text-sm font-semibold text-clinical-700 uppercase tracking-wide mt-1">B.Pharm Graduate · Pharmaceutical Sciences & Manufacturing Specialist</p>
+            <div class="flex justify-center gap-6 text-xs mt-2 text-slate-600">
+                <span>pthi00710@gmail.com</span>
+                <span>•</span>
+                <span>+91 8870818736</span>
+                <span>•</span>
+                <span>Puducherry, India</span>
+                <span>•</span>
+                <span>linkedin.com/in/parthiban-s-46092b399</span>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-6 mt-6">
+            <!-- Left Column -->
+            <div class="col-span-1 space-y-6 border-r border-slate-200 pr-6">
+                <div>
+                    <h2 class="text-sm font-bold uppercase text-clinical-700 tracking-wider mb-2">Core Competencies</h2>
+                    <ul class="text-xs space-y-2 text-slate-700">
+                        <li><strong>Pharmaceutics:</strong> Pharmacology, Clinical Therapeutics, Novel Formulations</li>
+                        <li><strong>Laboratory:</strong> Aseptic Processing, Stability Testing, UV-Vis Spectrophotometry</li>
+                        <li><strong>Quality & QA:</strong> Batch Record (BMR/BPR) Management, SOP Compliance, Deviation Tracking</li>
+                        <li><strong>Regulatory:</strong> ICH E6(R2) Guidelines, GCP, GVP, Medical Writing</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="text-sm font-bold uppercase text-clinical-700 tracking-wider mb-2">Certifications</h2>
+                    <ul class="text-xs space-y-2 text-slate-700">
+                        <li>• Introduction to Pharmaceutical QA</li>
+                        <li>• Good Clinical Practice (GCP) - ICH E6(R2)</li>
+                        <li>• Good Regulatory Practices in medical regulations</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="text-sm font-bold uppercase text-clinical-700 tracking-wider mb-2">Achievements</h2>
+                    <ul class="text-xs space-y-2 text-slate-700">
+                        <li>• Winner - College Pharmacy Quiz</li>
+                        <li>• National Level Judo Competitor</li>
+                        <li>• State Level Boxing Athlete</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="col-span-2 space-y-6">
+                <div>
+                    <h2 class="text-sm font-bold uppercase text-clinical-700 tracking-wider mb-2">Work Experience</h2>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between font-bold text-xs">
+                                <span>Sterile-Gene Life Science, Puducherry</span>
+                                <span class="text-slate-500">Jun 2025 – Present</span>
+                            </div>
+                            <em class="text-xs block text-clinical-700">Intern – Pharmaceutical Manufacturing</em>
+                            <ul class="text-xs list-disc list-inside mt-1 text-slate-600 space-y-1">
+                                <li>Supported aseptic processing in cleanroom sterile environments.</li>
+                                <li>Maintained batch execution records (BMR) and line logs in compliance with FDA-style audits.</li>
+                                <li>Trained in deviation reporting, CAPA guidelines, and ALCOA data integrity.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-sm font-bold uppercase text-clinical-700 tracking-wider mb-2">Education</h2>
+                    <div class="space-y-3 text-xs">
+                        <div>
+                            <div class="flex justify-between font-bold">
+                                <span>Shri Venkateshwara College of Pharmacy</span>
+                                <span class="text-slate-500">Dec 2021 – Dec 2025</span>
+                            </div>
+                            <span>Bachelor of Pharmacy (B.Pharm) — <strong>CGPA: 6.73</strong></span>
+                        </div>
+                        <div>
+                            <div class="flex justify-between font-bold">
+                                <span>Aditya Vidyashram Residential School</span>
+                                <span class="text-slate-500">2020 – 2021</span>
+                            </div>
+                            <span>Higher Secondary Education (Science) — <strong>69%</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-sm font-bold uppercase text-clinical-700 tracking-wider mb-2">Academic Project</h2>
+                    <p class="text-xs text-slate-600">
+                        <strong>Design, Development & Evaluation of Novel Transdermal Patch</strong><br>
+                        Formulated and tested transdermal matrices using PVP and Ethyl Cellulose polymers. Assessed folding endurance, moisture permeation, and kinetic release using Franz Diffusion Cells.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Interactive Navigation Header -->
+    <header class="no-print sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#hero" class="flex items-center gap-2">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-clinical-600 to-teal-400 flex items-center justify-center text-white font-bold text-lg shadow-md shadow-clinical-500/25">
+                    P
+                </div>
+                <div>
+                    <span class="font-bold text-md tracking-tight block leading-none text-slate-900 dark:text-white">PARTHIBAN S</span>
+                    <span class="text-[10px] text-clinical-600 dark:text-clinical-400 font-semibold uppercase tracking-wider">Pharma Portfolio</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Menu -->
+            <nav class="hidden lg:flex items-center gap-6">
+                <a href="#about" class="text-xs font-bold uppercase tracking-wider hover:text-clinical-600 dark:hover:text-clinical-400 transition-colors">About</a>
+                <a href="#experience" class="text-xs font-bold uppercase tracking-wider hover:text-clinical-600 dark:hover:text-clinical-400 transition-colors">Experience</a>
+                <a href="#gowning-game" class="text-xs font-bold uppercase tracking-wider hover:text-clinical-600 dark:hover:text-clinical-400 transition-colors">Aseptic Game</a>
+                <a href="#simulator" class="text-xs font-bold uppercase tracking-wider hover:text-clinical-600 dark:hover:text-clinical-400 transition-colors">Diffusion Lab</a>
+                <a href="#quiz-section" class="text-xs font-bold uppercase tracking-wider hover:text-clinical-600 dark:hover:text-clinical-400 transition-colors">GMP Quiz</a>
+                <a href="#contact" class="text-xs font-bold uppercase tracking-wider hover:text-clinical-600 dark:hover:text-clinical-400 transition-colors">Contact</a>
+            </nav>
+
+            <div class="flex items-center gap-2.5">
+                <!-- Theme Toggle -->
+                <button id="themeToggle" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:scale-105 transition-all" aria-label="Toggle Theme">
+                    <i data-lucide="moon" class="w-4 h-4 block dark:hidden"></i>
+                    <i data-lucide="sun" class="w-4 h-4 hidden dark:block"></i>
+                </button>
+                <!-- Print CV Trigger -->
+                <button onclick="window.print()" class="hidden sm:flex items-center gap-1.5 text-xs font-bold bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 px-3 py-2 rounded-lg hover:bg-slate-300 dark:hover:bg-slate-750 transition-all">
+                    <i data-lucide="printer" class="w-3.5 h-3.5"></i>
+                    Print CV
+                </button>
+                <button onclick="downloadResume()" class="bg-clinical-600 hover:bg-clinical-700 text-white font-bold text-xs py-2 px-3.5 rounded-lg shadow-sm hover:shadow transition-all flex items-center gap-1.5">
+                    <i data-lucide="download" class="w-3.5 h-3.5"></i>
+                    Markdown Resume
+                </button>
+                <button id="mobileMenuBtn" class="p-2 lg:hidden rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300" aria-label="Open Menu">
+                    <i data-lucide="menu" class="w-4 h-4"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dynamic Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 transition-all">
+            <div class="px-4 py-3 space-y-3 text-sm font-semibold">
+                <a href="#about" class="block py-2 border-b border-slate-100 dark:border-slate-800 hover:text-clinical-600">About</a>
+                <a href="#experience" class="block py-2 border-b border-slate-100 dark:border-slate-800 hover:text-clinical-600">Experience</a>
+                <a href="#gowning-game" class="block py-2 border-b border-slate-100 dark:border-slate-800 hover:text-clinical-600">Cleanroom Game</a>
+                <a href="#simulator" class="block py-2 border-b border-slate-100 dark:border-slate-800 hover:text-clinical-600">Kinetics Lab</a>
+                <a href="#quiz-section" class="block py-2 border-b border-slate-100 dark:border-slate-800 hover:text-clinical-600">GMP Quiz</a>
+                <a href="#contact" class="block py-2">Contact</a>
+                <button onclick="window.print()" class="w-full flex items-center justify-center gap-2 text-xs bg-slate-100 dark:bg-slate-800 py-2.5 rounded-lg font-bold">
+                    <i data-lucide="printer" class="w-4 h-4"></i>
+                    Print PDF Resume
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Toast Engine Container -->
+    <div id="toastContainer" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+    <main class="flex-grow no-print">
+        <!-- Hero with Molecule Micro-Canvas -->
+        <section id="hero" class="relative overflow-hidden py-16 md:py-24 border-b border-slate-200 dark:border-slate-800">
+            <!-- Decorative blur backdrops -->
+            <div class="absolute inset-0 pointer-events-none opacity-20 dark:opacity-10">
+                <div class="absolute top-1/4 left-1/4 w-80 h-80 bg-clinical-400 rounded-full filter blur-[120px] animate-pulse-slow"></div>
+                <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-teal-300 rounded-full filter blur-[140px] animate-pulse-slow"></div>
+            </div>
+
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    <!-- Left Hero: Title, dynamic badges, details -->
+                    <div class="lg:col-span-7 space-y-6">
+                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-clinical-50 dark:bg-clinical-950/60 border border-clinical-200 dark:border-clinical-800/80 text-clinical-800 dark:text-clinical-300 text-xs font-bold">
+                            <span class="flex h-2.5 w-2.5 relative">
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-teal-500"></span>
+                            </span>
+                            Active Sterile Operations Intern
+                        </div>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
+                            Synthesizing Rigorous <span class="text-transparent bg-clip-text bg-gradient-to-r from-clinical-600 to-teal-400 dark:from-clinical-400 dark:to-teal-300">Formulations</span> with FDA Integrity
+                        </h1>
+                        <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-xl">
+                            B.Pharm Graduate equipped with first-rate hands-on exposure to cleanroom grade zones, aseptic line clearance, and matrix patch permeation dynamics. Aligned with ALCOA+ data integrity rules.
+                        </p>
+
+                        <!-- Social/Contact Links -->
+                        <div class="flex flex-wrap gap-3 text-xs font-semibold text-slate-600 dark:text-slate-400">
+                            <span class="flex items-center gap-1.5 bg-white dark:bg-slate-900 px-3 py-2 rounded-lg border border-slate-200 dark:border-slate-800">
+                                <i data-lucide="map-pin" class="w-3.5 h-3.5 text-clinical-600"></i> Puducherry, India
+                            </span>
+                            <a href="mailto:pthi00710@gmail.com" class="flex items-center gap-1.5 bg-white dark:bg-slate-900 px-3 py-2 rounded-lg border border-slate-200 dark:border-slate-800 hover:border-clinical-400 transition-all">
+                                <i data-lucide="mail" class="w-3.5 h-3.5 text-clinical-600"></i> pthi00710@gmail.com
+                            </a>
+                            <a href="https://linkedin.com/in/parthiban-s-46092b399" target="_blank" class="flex items-center gap-1.5 bg-white dark:bg-slate-900 px-3 py-2 rounded-lg border border-slate-200 dark:border-slate-800 hover:border-clinical-400 transition-all">
+                                <i data-lucide="linkedin" class="w-3.5 h-3.5 text-clinical-600"></i> linkedin.com/in/parthiban-s
+                            </a>
+                        </div>
+
+                        <!-- Main CTAs -->
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#simulator" class="bg-clinical-600 hover:bg-clinical-700 text-white font-bold py-3 px-6 rounded-xl shadow-lg shadow-clinical-600/10 flex items-center gap-2 text-sm transition-all hover:scale-105">
+                                <i data-lucide="beaker" class="w-4 h-4"></i>
+                                Launch Diffusion Simulator
+                            </a>
+                            <a href="#gowning-game" class="bg-slate-200 hover:bg-slate-300 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-bold py-3 px-6 rounded-xl flex items-center gap-2 text-sm transition-all hover:scale-105">
+                                <i data-lucide="shield-check" class="w-4 h-4"></i>
+                                Cleanroom Gowning Game
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Hero: Molecular Structure Art -->
+                    <div class="lg:col-span-5 flex justify-center">
+                        <div class="relative w-full max-w-[380px] aspect-square rounded-3xl bg-gradient-to-tr from-clinical-50 to-teal-500/10 dark:from-slate-900 dark:to-clinical-950/30 border border-slate-200 dark:border-slate-800 p-6 flex flex-col justify-between shadow-2xl relative overflow-hidden">
+                            <!-- Molecular floating orbit graphic -->
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="w-44 h-44 border-2 border-dashed border-clinical-600/20 rounded-full animate-spin-slow"></div>
+                                <div class="w-32 h-32 border border-dashed border-teal-400/20 rounded-full absolute animate-[spin_8s_linear_infinite_reverse]"></div>
+                            </div>
+
+                            <div class="z-10 flex justify-between items-start">
+                                <span class="text-xs font-bold text-clinical-600 uppercase tracking-widest">Active Matrix</span>
+                                <div class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></div>
+                            </div>
+
+                            <!-- Vector Graphic representing a custom Matrix Delivery Patch -->
+                            <div class="z-10 flex flex-col items-center justify-center space-y-4">
+                                <div class="w-24 h-16 bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-100 dark:border-slate-700 p-3 flex flex-col justify-between relative overflow-hidden">
+                                    <div class="absolute right-1 top-1 w-2 h-2 rounded-full bg-clinical-500"></div>
+                                    <span class="text-[9px] font-bold text-slate-400 uppercase">Backing Layer</span>
+                                    <div class="h-1 bg-gradient-to-r from-clinical-300 to-clinical-600 rounded"></div>
+                                    <span class="text-[8px] text-slate-500">Rate-controlling membrane</span>
+                                </div>
+                                <div class="text-center">
+                                    <h4 class="font-bold text-sm text-slate-900 dark:text-white">PVP / EC Diffusion Core</h4>
+                                    <p class="text-xs text-slate-400">Tested to secure sustained plasma absorption</p>
+                                </div>
+                            </div>
+
+                            <div class="z-10 bg-white/90 dark:bg-slate-950/90 backdrop-blur-md p-3.5 rounded-2xl border border-slate-200 dark:border-slate-800 flex justify-between items-center">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-8 h-8 rounded-lg bg-teal-500/10 flex items-center justify-center text-teal-600">
+                                        <i data-lucide="award" class="w-4 h-4"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-xs font-bold">Sterile-Gene Life Science</div>
+                                        <div class="text-[10px] text-slate-500">cGMP Audited Cleanroom</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About section -->
+        <section id="about" class="py-16 md:py-24 bg-slate-100/50 dark:bg-slate-900/30 border-b border-slate-200 dark:border-slate-800">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-12 gap-12 items-start">
+                    
+                    <!-- Left: Core info -->
+                    <div class="lg:col-span-5 space-y-6">
+                        <div class="inline-flex items-center gap-1 text-xs font-bold text-clinical-600 uppercase tracking-widest">
+                            <i data-lucide="info" class="w-3.5 h-3.5"></i> Professional Overview
+                        </div>
+                        <h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+                            Formulation & GMP Rigor
+                        </h2>
+                        <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-sm sm:text-base">
+                            My academic research centers on <strong>Novel Drug Delivery Systems (NDDS)</strong>, particularly focusing on how polymer structures (such as PVP/Ethyl Cellulose) control the diffusion limits of systemic APIs.
+                        </p>
+                        <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-sm">
+                            At <strong>Sterile-Gene Life Science</strong>, I directly applied these theories, observing aseptic fluid lines, logging line-clearance documents, analyzing deviations under supervision, and verifying compliance with standard cleanroom grading protocols.
+                        </p>
+
+                        <!-- Athletics / Competitive spirit callout -->
+                        <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-orange-100 dark:bg-orange-950/40 text-orange-600 dark:text-orange-400 flex items-center justify-center font-bold">
+                                <i data-lucide="swords" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm">Competitive Athlete Drive</h4>
+                                <p class="text-xs text-slate-500">Bringing the exact focus and discipline from National Judo & State Boxing matches directly to GMP lab procedures.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Advanced interactive competencies grid -->
+                    <div class="lg:col-span-7 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 sm:p-8 shadow-xl">
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+                            <i data-lucide="cpu" class="text-clinical-600"></i> Core Scientific Competencies
+                        </h3>
+
+                        <div class="space-y-6">
+                            <!-- Skill Node 1 -->
+                            <div>
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="text-sm font-bold text-slate-800 dark:text-slate-250">Pharmaceutical Sciences & Pharmacokinetics</span>
+                                    <span class="text-xs font-semibold text-clinical-600">Advanced Academic</span>
+                                </div>
+                                <p class="text-xs text-slate-400 mb-2">Detailed mapping of bioavailability parameters, drug-excipient compatibility testing, and systemic absorption curves.</p>
+                                <div class="w-full h-1.5 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+                                    <div class="h-full bg-clinical-500 rounded-full" style="width: 88%"></div>
+                                </div>
+                            </div>
+
+                            <!-- Skill Node 2 -->
+                            <div>
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="text-sm font-bold text-slate-800 dark:text-slate-250">Aseptic Processing & Cleanrooms</span>
+                                    <span class="text-xs font-semibold text-clinical-600">Intern Certified</span>
+                                </div>
+                                <p class="text-xs text-slate-400 mb-2">Thoroughly trained in ISO-5 / Grade A cleanroom parameters, differential pressures, and gowning integrity.</p>
+                                <div class="w-full h-1.5 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+                                    <div class="h-full bg-clinical-500 rounded-full" style="width: 92%"></div>
+                                </div>
+                            </div>
+
+                            <!-- Skill Node 3 -->
+                            <div>
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="text-sm font-bold text-slate-800 dark:text-slate-250">Batch Record & Log Adherence (ALCOA+)</span>
+                                    <span class="text-xs font-semibold text-clinical-600">Strict Compliance</span>
+                                </div>
+                                <p class="text-xs text-slate-400 mb-2">Logging real-time production runs, standard deviations, audit trail maintenance, and data validation rules.</p>
+                                <div class="w-full h-1.5 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+                                    <div class="h-full bg-clinical-500 rounded-full" style="width: 90%"></div>
+                                </div>
+                            </div>
+
+                            <!-- Skill Node 4 -->
+                            <div>
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="text-sm font-bold text-slate-800 dark:text-slate-250">Regulatory Guidelines (ICH, GCP, GVP)</span>
+                                    <span class="text-xs font-semibold text-clinical-600">E6(R2) Aligned</span>
+                                </div>
+                                <p class="text-xs text-slate-400 mb-2">Understanding clinical safety profiles, Pharmacovigilance safety standards, and investigational drug files.</p>
+                                <div class="w-full h-1.5 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+                                    <div class="h-full bg-clinical-500 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Education Timeline -->
+        <section id="experience" class="py-16 md:py-24 border-b border-slate-200 dark:border-slate-800">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">Experience & Milestones</h2>
+                    <p class="mt-4 text-slate-600 dark:text-slate-400">Explore my progressive integration into high-quality pharmaceutical operations.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Experience Column -->
+                    <div class="space-y-8">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                            <i data-lucide="briefcase" class="text-clinical-600"></i> Industrial Operations
+                        </h3>
+
+                        <div class="relative pl-6 border-l-2 border-clinical-500 space-y-6">
+                            <!-- Bullet -->
+                            <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-clinical-500 border-2 border-white dark:border-slate-950"></div>
+                            
+                            <div class="space-y-2">
+                                <span class="inline-block px-2.5 py-0.5 text-xs font-bold bg-clinical-100 dark:bg-clinical-950 text-clinical-800 dark:text-teal-400 rounded-full">Jun 2025 - Present</span>
+                                <h4 class="font-extrabold text-slate-900 dark:text-white text-lg">Manufacturing Intern</h4>
+                                <div class="text-sm font-semibold text-clinical-600 dark:text-clinical-400">Sterile-Gene Life Science, Puducherry</div>
+                                <p class="text-xs text-slate-500 leading-relaxed">
+                                    Sterile aseptic production environment audited under highly stringent quality guidelines. Working under senior QA/QC supervisors:
+                                </p>
+                                <ul class="text-xs space-y-1.5 list-disc list-inside text-slate-600 dark:text-slate-400">
+                                    <li>Supported production runs for aseptic fills and cleanroom sanitization logs.</li>
+                                    <li>Learned strict environmental monitoring, differential pressure validation, and particle limits.</li>
+                                    <li>Aided in preparing BMR templates and tracking deviation corrective actions (CAPA).</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education Column -->
+                    <div class="space-y-8">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                            <i data-lucide="graduation-cap" class="text-clinical-600"></i> Education History
+                        </h3>
+
+                        <div class="space-y-6">
+                            <!-- Ed Item 1 -->
+                            <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm relative hover:shadow-md transition-all">
+                                <div class="absolute top-4 right-4 text-xs font-bold text-clinical-600 dark:text-teal-400">CGPA 6.73</div>
+                                <span class="text-[10px] font-bold text-slate-400">Dec 2021 – Dec 2025</span>
+                                <h4 class="font-bold text-slate-900 dark:text-white mt-1">Bachelor of Pharmacy (B.Pharm)</h4>
+                                <p class="text-xs text-slate-500">Shri Venkateshwara College of Pharmacy, Puducherry</p>
+                            </div>
+
+                            <!-- Ed Item 2 -->
+                            <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm relative">
+                                <div class="absolute top-4 right-4 text-xs font-bold text-clinical-600 dark:text-teal-400">69%</div>
+                                <span class="text-[10px] font-bold text-slate-400">2020 – 2021</span>
+                                <h4 class="font-bold text-slate-900 dark:text-white mt-1">Higher Secondary Education</h4>
+                                <p class="text-xs text-slate-500">Aditya Vidyashram Residential School, Puducherry</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Gowning Sequencing Game -->
+        <section id="gowning-game" class="py-16 md:py-24 bg-slate-100/50 dark:bg-slate-900/30 border-b border-slate-200 dark:border-slate-800">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="text-xs font-bold uppercase tracking-wider text-clinical-600">Virtual Cleanroom Training</span>
+                    <h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl mt-1">Aseptic Gowning Sequence Challenge</h2>
+                    <p class="mt-4 text-slate-600 dark:text-slate-400">Correct gowning sequence prevents particulate and bacterial load shedding. Drag or click the gear elements in the exact sterile protocol order to enter a Grade A facility!</p>
+                </div>
+
+                <div class="max-w-4xl mx-auto bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 sm:p-8 shadow-xl">
+                    <div class="grid md:grid-cols-12 gap-8 items-center">
+                        
+                        <!-- Left Game Controls -->
+                        <div class="md:col-span-7 space-y-6">
+                            <div class="flex items-center justify-between">
+                                <h4 class="font-bold text-sm text-slate-500 uppercase tracking-wider">Garments to Select:</h4>
+                                <span id="gameProgressDisplay" class="text-xs font-bold text-clinical-600 bg-clinical-50 dark:bg-clinical-950 px-2.5 py-1 rounded-full">Sequence Step: 1/6</span>
+                            </div>
+
+                            <!-- List of pieces -->
+                            <div id="gowningChoices" class="grid grid-cols-2 gap-3">
+                                <!-- Dynamic Items Added via JS -->
+                            </div>
+
+                            <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex justify-between items-center">
+                                <button onclick="resetGowningGame()" class="text-xs text-slate-400 hover:text-slate-600 font-semibold flex items-center gap-1.5">
+                                    <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i> Reset Protocol
+                                </button>
+                                <span id="gowningFeedback" class="text-xs font-semibold text-slate-500">Click garments in the correct physical sequence.</span>
+                            </div>
+                        </div>
+
+                        <!-- Right Game Board / Visual mannequin -->
+                        <div class="md:col-span-5 bg-slate-50 dark:bg-slate-950/60 border border-slate-100 dark:border-slate-800/80 rounded-2xl p-6 flex flex-col justify-between h-80 relative overflow-hidden">
+                            <div class="text-center font-bold text-xs text-slate-400 uppercase tracking-widest mb-4">Sterile Room Air Lock</div>
+                            
+                            <!-- Mannequin visualization layers -->
+                            <div class="flex-grow flex flex-col items-center justify-center space-y-2 relative">
+                                <div class="w-10 h-10 rounded-full border-2 border-slate-300 dark:border-slate-700 flex items-center justify-center text-xs font-bold text-slate-400" id="visual-head">
+                                    Head
+                                </div>
+                                <div class="w-16 h-28 border-2 border-slate-300 dark:border-slate-700 rounded-xl flex flex-col items-center justify-center text-xs font-bold text-slate-400 relative" id="visual-body">
+                                    Body Core
+                                    <!-- Inner Hands -->
+                                    <div class="absolute -left-6 bottom-4 w-4 h-4 border-2 border-slate-300 dark:border-slate-700 rounded-full flex items-center justify-center text-[8px]" id="visual-lhand">L</div>
+                                    <div class="absolute -right-6 bottom-4 w-4 h-4 border-2 border-slate-300 dark:border-slate-700 rounded-full flex items-center justify-center text-[8px]" id="visual-rhand">R</div>
+                                </div>
+                                <div class="flex gap-4">
+                                    <div class="w-6 h-8 border-2 border-slate-300 dark:border-slate-700 rounded-b flex items-center justify-center text-[9px] font-bold text-slate-400" id="visual-lboot">L-Boot</div>
+                                    <div class="w-6 h-8 border-2 border-slate-300 dark:border-slate-700 rounded-b flex items-center justify-center text-[9px] font-bold text-slate-400" id="visual-rboot">R-Boot</div>
+                                </div>
+                            </div>
+
+                            <!-- Success state -->
+                            <div id="gowningSuccessOverlay" class="hidden absolute inset-0 bg-emerald-600/95 backdrop-blur-sm flex flex-col justify-center items-center text-white text-center p-6 space-y-3">
+                                <i data-lucide="shield-check" class="w-12 h-12"></i>
+                                <h4 class="font-bold text-lg">Cleanroom Grade A Ready!</h4>
+                                <p class="text-xs text-white/80">Excellent. Correct sequence ensures zero trace biological shedding from human skin particles into sterilized liquid vials.</p>
+                                <button onclick="resetGowningGame()" class="bg-white text-emerald-800 font-bold text-xs py-2 px-4 rounded-lg shadow hover:bg-slate-100 transition-all">Try Again</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulation Research & Kinetic Simulator -->
+        <section id="simulator" class="py-16 md:py-24 border-b border-slate-200 dark:border-slate-800">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="text-xs font-bold uppercase tracking-wider text-clinical-600">Franz Diffusion Cell Simulator</span>
+                    <h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl mt-1">Novel Transdermal Release kinetics</h2>
+                    <p class="mt-4 text-slate-600 dark:text-slate-400">
+                        In my undergraduate project, I formulated and evaluated polymer-based patches using <strong>Polyvinylpyrrolidone (PVP)</strong> and <strong>Ethyl Cellulose (EC)</strong>. Use this mathematical simulation to see how different physical and chemical models control drug release rates.
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-12 gap-8 items-stretch">
+                    <!-- Control parameters -->
+                    <div id="simulator-controls" class="lg:col-span-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 sm:p-8 shadow-md flex flex-col justify-between">
+                        <div class="space-y-6">
+                            <h3 class="font-bold text-lg text-slate-900 dark:text-white flex items-center gap-2">
+                                <i data-lucide="sliders" class="text-clinical-600"></i> Formulation Factors
+                            </h3>
+
+                            <!-- Model Selection -->
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold text-slate-400 uppercase">Kinetic Mathematical Model</label>
+                                <div class="grid grid-cols-3 gap-2">
+                                    <button onclick="changeKineticModel('higuchi')" id="btn-higuchi" class="p-2.5 rounded-xl border text-xs font-bold text-center transition-all bg-clinical-500 border-clinical-500 text-white shadow">
+                                        Higuchi Matrix
+                                    </button>
+                                    <button onclick="changeKineticModel('zero')" id="btn-zero" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 text-xs font-bold text-center transition-all hover:bg-slate-50 dark:hover:bg-slate-950">
+                                        Zero-Order
+                                    </button>
+                                    <button onclick="changeKineticModel('first')" id="btn-first" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 text-xs font-bold text-center transition-all hover:bg-slate-50 dark:hover:bg-slate-950">
+                                        First-Order
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Slider 1: PVP (Hydrophilic Swelling agent) -->
+                            <div class="space-y-2">
+                                <div class="flex justify-between items-center text-xs font-bold">
+                                    <span>PVP Hydrophilic Ratio:</span>
+                                    <span id="pvpLabel" class="text-clinical-600">65%</span>
+                                </div>
+                                <input id="pvpSlider" type="range" min="10" max="90" value="65" class="w-full accent-clinical-500 cursor-pointer">
+                                <p class="text-[10px] text-slate-400 italic">Increases hydration swelling, allowing faster, burst release profiles.</p>
+                            </div>
+
+                            <!-- Slider 2: Skin Permeability Coefficient -->
+                            <div class="space-y-2">
+                                <div class="flex justify-between items-center text-xs font-bold">
+                                    <span>Permeability ($P_m$):</span>
+                                    <span id="permLabel" class="text-clinical-600">1.8 cm/h</span>
+                                </div>
+                                <input id="permSlider" type="range" min="5" max="30" value="18" class="w-full accent-clinical-500 cursor-pointer">
+                                <p class="text-[10px] text-slate-400 italic">Adjusts the biological skin barrier lipid permeability factor.</p>
+                            </div>
+                        </div>
+
+                        <!-- Technical Formula Notes -->
+                        <div class="mt-8 p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-850">
+                            <span class="block text-[10px] font-bold text-slate-400 uppercase mb-1">Active Mathematical Formula:</span>
+                            <div id="formulaText" class="text-xs font-mono text-clinical-700 dark:text-clinical-400">
+                                $Q_t = K_H \cdot \sqrt{t}$
+                            </div>
+                            <span class="text-[9px] text-slate-400 mt-2 block">Higuchi equation modeling drug dissolution from insoluble polymer matrices.</span>
+                        </div>
+                    </div>
+
+                    <!-- Dynamic Canvas Chart and results -->
+                    <div class="lg:col-span-7 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 sm:p-8 shadow-md flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-center mb-4">
+                                <h3 class="font-bold text-slate-900 dark:text-white text-base">In-Vitro Release Kinetics</h3>
+                                <span class="text-xs font-semibold bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-400 px-2.5 py-1 rounded-full">Franz cell setup</span>
+                            </div>
+
+                            <!-- Canvas Container -->
+                            <div class="border border-slate-200 dark:border-slate-800 rounded-2xl p-4 bg-slate-50 dark:bg-slate-950/60 relative">
+                                <div class="flex justify-between text-[10px] font-semibold text-slate-400 mb-2">
+                                    <span>Cumulative Release ($Q$ in $mg/cm^2$)</span>
+                                    <span>Time ($t$ in hrs)</span>
+                                </div>
+                                <div class="relative h-48 w-full">
+                                    <canvas id="diffusionChart" class="w-full h-full"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Results Readout Section -->
+                        <div class="grid grid-cols-3 gap-2 mt-6 text-center border-t border-slate-100 dark:border-slate-800 pt-6">
+                            <div>
+                                <span class="text-[9px] text-slate-400 font-bold uppercase tracking-wider block">Permeation Flux ($J_{ss}$)</span>
+                                <div id="fluxVal" class="text-lg font-extrabold text-clinical-600 mt-1">0.96 mg/hr</div>
+                            </div>
+                            <div>
+                                <span class="text-[9px] text-slate-400 font-bold uppercase tracking-wider block">Lag Phase ($T_{lag}$)</span>
+                                <div id="lagVal" class="text-lg font-extrabold text-clinical-600 mt-1">1.2 hrs</div>
+                            </div>
+                            <div>
+                                <span class="text-[9px] text-slate-400 font-bold uppercase tracking-wider block">Permeation Peak</span>
+                                <div id="peakVal" class="text-lg font-extrabold text-clinical-600 mt-1">89.4%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upgraded Pharmacy Trivia Quiz -->
+        <section id="quiz-section" class="py-16 md:py-24 bg-slate-100/50 dark:bg-slate-900/30 border-b border-slate-200 dark:border-slate-800">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs font-bold uppercase tracking-wider text-clinical-600">Test Your Knowledge</span>
+                    <h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl mt-1">College Champion Pharmacy Quiz</h2>
+                    <p class="mt-4 text-slate-600 dark:text-slate-400">Can you match my college award-winning score? Take this short industrial quality, formulations, and regulatory principles quiz!</p>
+                </div>
+
+                <div class="max-w-2xl mx-auto bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 sm:p-8 shadow-xl">
+                    <div id="quizApp">
+                        <!-- Header progress state -->
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="text-xs font-bold text-slate-400 tracking-wider uppercase" id="quizStepText">Question 1 of 5</span>
+                            <span class="text-xs font-bold text-clinical-600 bg-clinical-100/60 dark:bg-clinical-950/60 px-2.5 py-1 rounded-full" id="quizScoreText">Score: 0</span>
+                        </div>
+
+                        <!-- Question Statement -->
+                        <h3 id="questionBox" class="text-lg font-extrabold text-slate-900 dark:text-white mb-6">Which regulatory concept is summarized by the abbreviation ALCOA+?</h3>
+
+                        <!-- Answer choices list -->
+                        <div id="optionsBox" class="space-y-3">
+                            <!-- Dynamic answers generated via JS -->
+                        </div>
+
+                        <!-- Technical Explanation Callout Box -->
+                        <div id="quizExplanationBox" class="hidden mt-4 p-4 rounded-xl text-xs leading-relaxed bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-500">
+                            <!-- Explanation text -->
+                        </div>
+
+                        <!-- Next Action triggers -->
+                        <div class="mt-8 pt-6 border-t border-slate-100 dark:border-slate-800 flex justify-between items-center">
+                            <button onclick="resetQuiz()" class="text-xs text-slate-400 hover:text-slate-600 font-semibold flex items-center gap-1">
+                                <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i> Restart
+                            </button>
+                            <button id="quizActionBtn" onclick="onQuizAction()" class="bg-clinical-600 hover:bg-clinical-700 text-white font-bold text-xs py-2 px-6 rounded-lg shadow transition-all" disabled>
+                                Verify Choice
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- End Game Summary -->
+                    <div id="quizResultView" class="hidden text-center py-8 space-y-6">
+                        <div class="w-16 h-16 bg-clinical-500/10 rounded-full flex items-center justify-center mx-auto text-clinical-600">
+                            <i data-lucide="trophy" class="w-8 h-8"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Trivia Challenge Concluded!</h3>
+                            <p class="text-slate-500 dark:text-slate-400 mt-2">Your Final Score is <span id="finalScoreDisplay" class="font-bold text-clinical-600">0</span> / 5.</p>
+                        </div>
+                        <p id="quizPerformanceText" class="text-sm text-slate-600 dark:text-slate-300 max-w-sm mx-auto">Outstanding results! Your regulatory & quality foundations are remarkably solid.</p>
+                        <button onclick="resetQuiz()" class="bg-slate-200 hover:bg-slate-300 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-bold text-xs py-2.5 px-6 rounded-xl shadow transition-all">
+                            Play Again
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Persistent Recruiter Terminal & Connect -->
+        <section id="contact" class="py-16 md:py-24">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-12 gap-12 items-stretch">
+                    
+                    <!-- Left: Contact info -->
+                    <div class="lg:col-span-5 space-y-8 flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-clinical-600">Inquiry Routing</span>
+                            <h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">Establish Contact</h2>
+                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-sm">
+                                Open to discussions for QA positions, manufacturing/sterile production shifts, and R&D formulation chemist trainee paths.
+                            </p>
+                        </div>
+
+                        <!-- Direct contact links cards -->
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3 p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                                <div class="p-2.5 rounded bg-clinical-500/10 text-clinical-600">
+                                    <i data-lucide="mail" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-[10px] text-slate-400 font-bold uppercase">Direct Mail</span>
+                                    <a href="mailto:pthi00710@gmail.com" class="font-semibold text-sm hover:text-clinical-600">pthi00710@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-3 p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                                <div class="p-2.5 rounded bg-clinical-500/10 text-clinical-600">
+                                    <i data-lucide="phone" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-[10px] text-slate-400 font-bold uppercase">Phone Call / WhatsApp</span>
+                                    <a href="tel:+918870818736" class="font-semibold text-sm hover:text-clinical-600">+91 8870818736</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick LinkedIn micro-banner -->
+                        <div class="p-5 rounded-2xl bg-gradient-to-tr from-clinical-700 to-clinical-500 text-white space-y-3">
+                            <h4 class="font-bold text-sm">LinkedIn Networking</h4>
+                            <p class="text-[11px] text-white/80">Connecting with quality control leads, formulators, and pharmaceutical site directors worldwide.</p>
+                            <a href="https://linkedin.com/in/parthiban-s-46092b399" target="_blank" class="inline-flex items-center gap-1.5 bg-white text-clinical-800 font-bold text-[10px] uppercase tracking-wider py-2 px-4 rounded-lg shadow hover:bg-slate-100 transition-all">
+                                <i data-lucide="linkedin" class="w-3.5 h-3.5"></i> Connect on LinkedIn
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Dynamic message form with persistence logic -->
+                    <div class="lg:col-span-7 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 sm:p-8 shadow-xl flex flex-col justify-between">
+                        <div class="space-y-6">
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                                <i data-lucide="message-square" class="text-clinical-600"></i> Local Message Terminal
+                            </h3>
+
+                            <form id="recruiterForm" onsubmit="submitRecruiterMessage(event)" class="space-y-4 text-xs font-semibold">
+                                <div class="grid sm:grid-cols-2 gap-4">
+                                    <div class="space-y-1">
+                                        <label for="formName" class="text-slate-400">YOUR NAME</label>
+                                        <input type="text" id="formName" required placeholder="Dr. Sarah Jenkins" class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg p-3 outline-none focus:border-clinical-500 transition-colors">
+                                    </div>
+                                    <div class="space-y-1">
+                                        <label for="formEmail" class="text-slate-400">EMAIL ADDRESS</label>
+                                        <input type="email" id="formEmail" required placeholder="sarah@pharma-industries.com" class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg p-3 outline-none focus:border-clinical-500 transition-colors">
+                                    </div>
+                                </div>
+                                <div class="space-y-1">
+                                    <label for="formSubject" class="text-slate-400">SUBJECT / ROLE SPECIFICATION</label>
+                                    <input type="text" id="formSubject" required placeholder="Site Interview / Formulation Trainee Opening" class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg p-3 outline-none focus:border-clinical-500 transition-colors">
+                                </div>
+                                <div class="space-y-1">
+                                    <label for="formBody" class="text-slate-400">MESSAGE SUMMARY</label>
+                                    <textarea id="formBody" rows="4" required placeholder="Provide details on the potential role, expectations, and cleanroom certification prerequisites..." class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg p-3 outline-none focus:border-clinical-500 transition-colors"></textarea>
+                                </div>
+
+                                <button type="submit" class="w-full bg-clinical-600 hover:bg-clinical-700 text-white font-bold py-3 px-6 rounded-xl shadow-lg transition-all hover:scale-105 flex items-center justify-center gap-2">
+                                    <i data-lucide="send" class="w-4 h-4"></i> Transmit Message Securely
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- Persistent Message Log Board -->
+                        <div class="mt-8 pt-6 border-t border-slate-100 dark:border-slate-800">
+                            <div class="flex justify-between items-center mb-3">
+                                <h4 class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Simulated Message Box (LocalStorage Audit Log)</h4>
+                                <button onclick="clearSavedMessages()" class="text-[9px] font-bold text-red-500 hover:text-red-700 flex items-center gap-1">
+                                    <i data-lucide="trash-2" class="w-3 h-3"></i> Clear
+                                </button>
+                            </div>
+                            <div id="messagesList" class="text-[11px] bg-slate-50 dark:bg-slate-950 border border-slate-150 dark:border-slate-850 p-3 rounded-xl max-h-24 overflow-y-auto space-y-2">
+                                <span class="text-slate-400 italic">No submissions cached in local storage. Send a test inquiry above!</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="no-print bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-10 transition-colors text-xs font-semibold">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 text-slate-500">
+                <div>
+                    <span class="font-bold text-slate-900 dark:text-white">PARTHIBAN S</span>
+                    <p class="text-[10px] mt-1">Sustained drug matrix innovations & GMP Compliant operations.</p>
+                </div>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#about" class="hover:text-clinical-600">About</a>
+                    <a href="#experience" class="hover:text-clinical-600">Experience</a>
+                    <a href="#gowning-game" class="hover:text-clinical-600">Cleanroom Game</a>
+                    <a href="#simulator" class="hover:text-clinical-600">Kinetics Lab</a>
+                    <a href="#quiz-section" class="hover:text-clinical-600">GMP Quiz</a>
+                </div>
+                <div>
+                    &copy; 2026 Parthiban S. All rights reserved. Registered under B.Pharm standards.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts and Calculation Engines -->
+    <script>
+        // Core Web Audio API Sound Synthesizer for immediate, non-intrusive sound effects
+        const soundEngine = {
+            ctx: null,
+            init() {
+                if (!this.ctx) {
+                    this.ctx = new (window.AudioContext || window.webkitAudioContext)();
+                }
+            },
+            play(type) {
+                try {
+                    this.init();
+                    if (this.ctx.state === 'suspended') {
+                        this.ctx.resume();
+                    }
+
+```
